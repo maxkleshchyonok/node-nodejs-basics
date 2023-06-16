@@ -7,7 +7,7 @@ const pathToNewFile = path.join(__dirname, 'files', 'fresh.txt');
 
 const create = async () => {
     // Write your code here
-    fs.access(pathToNewFile, fs.F_OK, (err) => {
+    fs.access(pathToNewFile, fs.constants.F_OK, (err) => {
         if (err) {
             const data = 'I am fresh and young';
             fs.writeFile(pathToNewFile, data, (err) => {
